@@ -27,7 +27,10 @@ public class Student {
     private int numClass;
     @Column(nullable = false)
     private boolean isTravel;
+    private Cause cause;
+    @Column(nullable = false)
     private String pickupAddress;
+    @Column(nullable = false)
     private int numBus;
     @Column(nullable = false)
     private Hour hour;
@@ -41,4 +44,7 @@ public class Student {
         THIRTEEN, SIXTEEN;
     }
 
+    public enum Cause{
+        RELEASE, ABSENCE,OTHER;
+    }
 }
