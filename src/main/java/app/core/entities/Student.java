@@ -24,7 +24,9 @@ public class Student {
     @Column(nullable = false , unique = true)
     private String phone;
     @Column(nullable = false)
-    private int numClass;
+    @ManyToOne
+    @JoinColumn(name = "bus_id")
+    private Transportion numClass;
     @Column(nullable = false)
     private boolean isTravel;
     private Cause cause;
